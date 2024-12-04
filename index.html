@@ -2,12 +2,12 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Sua Vida Pode Mudar a Partir de Hoje</title>
+    <title>Mude sua Vida Hoje</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0 20px; /* Adicionado espaço nas laterais */
+            padding: 0 20px;
             background: linear-gradient(90deg, #1e3c72, #2a5298);
             color: #fff;
         }
@@ -73,7 +73,7 @@
             cursor: pointer;
             text-transform: uppercase;
             border-radius: 5px;
-            margin: 10px auto;
+            margin: 30px auto; /* Maior espaço entre botões */
             display: inline-block;
             text-decoration: none;
         }
@@ -82,14 +82,10 @@
             background-color: #ffd633;
         }
 
-        .hidden {
-            display: none;
-        }
-
-        .story, .benefits {
-            max-width: 900px; /* Limita a largura máxima do texto */
-            margin: 20px auto; /* Centraliza o conteúdo horizontalmente */
-            padding: 20px; /* Adiciona espaço interno ao conteúdo */
+        .story, .benefits, .testimonials {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
             background: #ffffff10;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -113,6 +109,15 @@
             font-size: 20px;
             margin-bottom: 10px;
             color: #ffcc00;
+        }
+
+        .testimonials img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            margin: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         footer {
@@ -149,7 +154,7 @@
             }
 
             .story, .benefits {
-                padding: 15px; /* Reduz o padding em telas menores */
+                padding: 15px;
             }
         }
     </style>
@@ -159,52 +164,60 @@
     <header class="hero">
         <div class="counter" id="vagasCounter">Restam apenas 89 vagas de 500!</div>
         <div class="logo">
-            <img src="https://github.com/Terrivel007/minha-landing-page/blob/e6f560daba9a440cfce163cdc096c10fbc862d11/a-sleek-and-modern-logo-for-profit-dynamics-a-comp-jI62b8fHTDCutTRy6iVqFA-ar34ut5FTfq6q5EnCpsviw%20(1).jpeg?raw=true" alt="Logo da Empresa">
+            <img src="https://github.com/ProfitDynamics/Prophet/blob/main/a-sleek-and-modern-logo-for-profit-dynamics-a-comp-jI62b8fHTDCutTRy6iVqFA-ar34ut5FTfq6q5EnCpsviw%20(1).jpeg?raw=true" alt="Logo da Empresa">
         </div>
         <h1>A Solução Que Está Mudando o Jogo no Mercado Financeiro</h1>
         <p>Uma ferramenta que combina tecnologia e estatísticas para gerar resultados consistentes. Sem complicações, sem estresse.</p>
-        <video id="videoPlayer" controls>
-            <source src="https://github.com/ProfitDynamics/Prophet/raw/main/Anuncio1-1.mp4" type="video/mp4">
-            Seu navegador não suporta o elemento de vídeo.
+        <!-- Vídeo -->
+        <video id="videoPlayer" controls controlslist="nodownload noremoteplayback" oncontextmenu="return false;">
+            <source src="https://github.com/ProfitDynamics/Prophet/blob/main/Anuncio1-1.mp4?raw=true" type="video/mp4">
+            Seu navegador não suporta a reprodução deste vídeo.
         </video>
     </header>
 
-    <!-- Botões de Ação (Aparecem após 10 minutos) -->
-    <div id="ctaButtons" class="hidden">
-        <a href="#" class="button">Sim, Quero Aproveitar Antes Que Acabe!</a>
-        <a href="#" class="button">Sim, Estou Pronto para Lucrar!</a>
+  <!-- Minha História Completa -->
+  <section class="story">
+    <h2>Minha Jornada de Superação</h2>
+    <p>Olá, meu nome é Everton, nasci em 1992, na zona leste de São Paulo, em uma família humilde. Cresci em uma comunidade onde a chuva entrava pela casa, e a gente precisava usar sabão em pedra derretido para tampar os buracos no telhado. Apesar das dificuldades, nunca faltou comida na mesa, graças ao esforço da minha mãe, que trabalhava como empregada doméstica para sustentar a mim, meus dois irmãos e dois primos.</p>
+    <p>Mas a vida nunca foi fácil. Meu pai passou anos desempregado, e, quando ele conseguiu um emprego, já estava com 12 anos. Foi uma melhora, mas não por muito tempo. Nessa época, minha mãe enfrentou um câncer maligno no útero, o que nos trouxe outro grande desafio. Ela perdeu o emprego e precisou passar por longos tratamentos de radioterapia. Felizmente, ela venceu o câncer, mas a nossa situação financeira ficou ainda mais complicada.</p>
+    <p>Com 13 anos, comecei a trabalhar como ajudante de pedreiro, e, aos 14, vendia temperos na feira junto com minha mãe. Ajudar em casa era uma necessidade, e minha infância foi marcada pelo trabalho duro.</p>
+    <p><strong>Buscando Oportunidades</strong></p>
+    <p>Aos 16 anos, quando meu pai perdeu o emprego novamente, conseguimos dar entrada em um apartamento na zona leste com o dinheiro da rescisão. Mudamos para uma área entre Guaianases, Cidade Tiradentes e Itaquera. Trabalhei como ajudante de pintor, depois em uma gráfica, e, aos 19 anos, consegui um emprego na região da 25 de março, onde fiquei por 10 anos.</p>
+    <p>Foi nesse período, com 25 anos, que algo mudou. Vi um anúncio sobre ganhar dinheiro de forma rápida e fácil no mercado financeiro . Meu salário era de R$ 900, mas o curso custava R$ 1.600. Peguei um cartão emprestado e investi. O curso foi motivador, mas, na prática, os resultados não vieram. Comecei uma jornada intensa em busca de aprendizado: gastei dinheiro com cursos, estratégias milagrosas, robôs e indicadores. No fim, somando tudo, já tinha perdido mais de R$30.000 tentando encontrar o "santo graal" do day trade.</p>
+    <p><strong>O Ponto de Virada</strong></p>
+    <p>Depois de tantas perdas, entendi que o problema não era apenas nas estratégias, mas também no emocional . Toda vez que eu operava manualmente, fazia besteira. Foi então que decidi eliminar o emocional da equação e comecei a desenvolver meu próprio robô.
+
+        Desenvolvi uma ferramenta com um conceito totalmente diferente de tudo o que tinha aprendido. Eu mesmo criei as estratégias, sem copiar fórmulas prontas. Foi nesse momento que tudo começou a mudar. O robô começou a trazer consistência :
+        
+        As perdas passaram a ser controladas.
+        Os ganhos obtidos a superar todas elas.
+        Hoje, meu robô opera sozinho enquanto eu trabalho, assisto a série ou brinco com minha filha. A consistência, que tanto busquei, finalmente chegou.</p>
+    <p><strong>Por Que Compartilho Minha História?</strong></p>
+    <p>Se você está lendo isso, talvez já tenha passado pelas mesmas dificuldades que eu passei:
+
+        Invista tempo e dinheiro em estratégias que não funcionam.
+        Sentir que o mercado financeiro é só para quem tem muita sorte ou experiência.
+        Lidar com o emocional e acabar tomando decisões ruinosas.
+        Eu sei o quanto isso é frustrante. Mas quero que você saiba: há uma solução. Não é mágico, nem promessa milagrosa, mas sim tecnologia e controle.
+        
+        Hoje, depois de mais de um ano de resultados consistentes, sinto-me confiante em compartilhar meu robô com você. Ele é o produto de anos de erros, aprendizados e desenvolvimento..</p>
+    <p><strong>Minha Família: Minha Motivação</strong></p>  
+    <p>Hoje tenho 32 anos e sou casado com uma mulher incrível desde os 28 anos . Também sou pai de uma menina linda de 4 anos, que ilumina meus dias. Minha maior motivação sempre foi dar uma vida melhor para minha família e retribuir todo o esforço dos meus pais. Ainda tenho sonhos grandes, mas agora, finalmente, sinto que não estou no caminho certo.</p>    
+</section>
+
+    <!-- Botão "Sim, Estou Pronto para Lucrar!" -->
+    <div id="ctaButtonTop" class="hidden">
+        <a href="https://chk.eduzz.com/7WX5NDED0A" target="_blank" class="button">Sim, Estou Pronto para Lucrar!</a>
     </div>
 
-    <!-- Minha História Completa -->
-    <section class="story">
-        <h2>Minha Jornada de Superação</h2>
-        <p>Olá, meu nome é Everton, nasci em 1992, na zona leste de São Paulo, em uma família humilde. Cresci em uma comunidade onde a chuva entrava pela casa, e a gente precisava usar sabão em pedra derretido para tampar os buracos no telhado. Apesar das dificuldades, nunca faltou comida na mesa, graças ao esforço da minha mãe, que trabalhava como empregada doméstica para sustentar a mim, meus dois irmãos e dois primos.</p>
-        <p>Mas a vida nunca foi fácil. Meu pai passou anos desempregado, e, quando ele conseguiu um emprego, já estava com 12 anos. Foi uma melhora, mas não por muito tempo. Nessa época, minha mãe enfrentou um câncer maligno no útero, o que nos trouxe outro grande desafio. Ela perdeu o emprego e precisou passar por longos tratamentos de radioterapia. Felizmente, ela venceu o câncer, mas a nossa situação financeira ficou ainda mais complicada.</p>
-        <p>Com 13 anos, comecei a trabalhar como ajudante de pedreiro, e, aos 14, vendia temperos na feira junto com minha mãe. Ajudar em casa era uma necessidade, e minha infância foi marcada pelo trabalho duro.</p>
-        <p><strong>Buscando Oportunidades</strong></p>
-        <p>Aos 16 anos, quando meu pai perdeu o emprego novamente, conseguimos dar entrada em um apartamento na zona leste com o dinheiro da rescisão. Mudamos para uma área entre Guaianases, Cidade Tiradentes e Itaquera. Trabalhei como ajudante de pintor, depois em uma gráfica, e, aos 19 anos, consegui um emprego na região da 25 de março, onde fiquei por 10 anos.</p>
-        <p>Foi nesse período, com 25 anos, que algo mudou. Vi um anúncio sobre ganhar dinheiro de forma rápida e fácil no mercado financeiro . Meu salário era de R$ 900, mas o curso custava R$ 1.600. Peguei um cartão emprestado e investi. O curso foi motivador, mas, na prática, os resultados não vieram. Comecei uma jornada intensa em busca de aprendizado: gastei dinheiro com cursos, estratégias milagrosas, robôs e indicadores. No fim, somando tudo, já tinha perdido mais de R$30.000 tentando encontrar o "santo graal" do day trade.</p>
-        <p><strong>O Ponto de Virada</strong></p>
-        <p>Depois de tantas perdas, entendi que o problema não era apenas nas estratégias, mas também no emocional . Toda vez que eu operava manualmente, fazia besteira. Foi então que decidi eliminar o emocional da equação e comecei a desenvolver meu próprio robô.
-
-            Desenvolvi uma ferramenta com um conceito totalmente diferente de tudo o que tinha aprendido. Eu mesmo criei as estratégias, sem copiar fórmulas prontas. Foi nesse momento que tudo começou a mudar. O robô começou a trazer consistência :
-            
-            As perdas passaram a ser controladas.
-            Os ganhos obtidos a superar todas elas.
-            Hoje, meu robô opera sozinho enquanto eu trabalho, assisto a série ou brinco com minha filha. A consistência, que tanto busquei, finalmente chegou.</p>
-        <p><strong>Por Que Compartilho Minha História?</strong></p>
-        <p>Se você está lendo isso, talvez já tenha passado pelas mesmas dificuldades que eu passei:
-
-            Invista tempo e dinheiro em estratégias que não funcionam.
-            Sentir que o mercado financeiro é só para quem tem muita sorte ou experiência.
-            Lidar com o emocional e acabar tomando decisões ruinosas.
-            Eu sei o quanto isso é frustrante. Mas quero que você saiba: há uma solução. Não é mágico, nem promessa milagrosa, mas sim tecnologia e controle.
-            
-            Hoje, depois de mais de um ano de resultados consistentes, sinto-me confiante em compartilhar meu robô com você. Ele é o produto de anos de erros, aprendizados e desenvolvimento..</p>
-        <p><strong>Minha Família: Minha Motivação</strong></p>  
-        <p>Hoje tenho 32 anos e sou casado com uma mulher incrível desde os 28 anos . Também sou pai de uma menina linda de 4 anos, que ilumina meus dias. Minha maior motivação sempre foi dar uma vida melhor para minha família e retribuir todo o esforço dos meus pais. Ainda tenho sonhos grandes, mas agora, finalmente, sinto que não estou no caminho certo.</p>    
+    <!-- Depoimentos -->
+    <section class="testimonials">
+        <h2>Depoimentos</h2>
+        <img src="https://github.com/ProfitDynamics/Prophet/blob/main/Captura%20de%20tela%202024-12-04%20131847.png?raw=true" alt="Depoimento 1">
+        <img src="https://github.com/ProfitDynamics/Prophet/blob/main/Captura%20de%20tela%202024-12-04%20131908.png?raw=true" alt="Depoimento 2">
+        <img src="https://github.com/ProfitDynamics/Prophet/blob/main/Captura%20de%20tela%202024-12-04%20131920.png?raw=true" alt="Depoimento 3">
+        <img src="https://github.com/ProfitDynamics/Prophet/blob/main/Captura%20de%20tela%202024-12-04%20131932.png?raw=true" alt="Depoimento 4">
     </section>
-
 
     <!-- Destaques dos Benefícios -->
     <section class="benefits">
@@ -213,30 +226,41 @@
             <li>
                 <h3>1. Economia de Tempo e Esforço</h3>
                 <p>Deixe o algoritmo fazer o trabalho pesado enquanto você foca no que realmente importa.</p>
+                <p>Automatização completa que elimina a necessidade de análise constante. Ideal para quem tem pouco tempo disponível para acompanhar o mercado.</p>
             </li>
-            <!-- Outros benefícios -->
+            <li>
+                <h3>2. Estratégia Baseada em Dados Reais</h3>
+                <p>Tome decisões embasadas com estatística de inteligência e elimine o fator emocional.</p>
+                <p>Algoritmos configurados para maximizar lucros e minimizar riscos. Resultados comprovados com análises transparentes.</p>
+            </li>
+            <li>
+                <h3>3. Controle Total e Simplicidade</h3>
+                <p>Você não precisa ser um especialista para começar.</p>
+                <p>Interface fácil de usar, mesmo para iniciantes. Configurações simples, sem necessidade de conhecimento técnico avançado.</p>
+            </li>
+            <li>
+                <h3>4. Risco Calculado e Gerenciado</h3>
+                <p>Segurança em primeiro lugar: nosso sistema prioriza o controle de perdas.</p>
+                <p>Gerenciamento de risco ajustado para proteger seu capital. Estratégias calibradas para resultados consistentes, mesmo em dias difíceis.</p>
+            </li>
+            <li>
+                <h3>5. Exclusividade e Inovação</h3>
+                <p>Tecnologia de ponta acessível a poucos.</p>
+                <p>Uma solução inovadora que está transformando o mercado financeiro. Apenas para quem busca maximizar seus ganhos com inteligência e exclusividade.</p>
+            </li>
         </ul>
     </section>
 
-    <!-- Script para Contagem Regressiva -->
+
+    <!-- Botão "Sim, Quero Aproveitar Antes Que Acabe!" -->
+    <div id="ctaButtonBottom" class="hidden">
+        <a href="https://chk.eduzz.com/7WX5NDED0A" target="_blank" class="button">Sim, Quero Aproveitar Antes Que Acabe!</a>
+    </div>
+
+    <!-- Script -->
     <script>
-        let vagasRestantes = 89; // Número inicial de vagas
+        let vagasRestantes = 89;
         const counterElement = document.getElementById("vagasCounter");
 
         function atualizarContador() {
-            if (vagasRestantes > 0) {
-                vagasRestantes--; // Reduz uma vaga
-                counterElement.textContent = `Restam apenas ${vagasRestantes} vagas de 500!`;
-            }
-        }
-
-        // Atualiza o contador a cada 1 minuto
-        setInterval(atualizarContador, 60000);
-
-        // Exibe os botões após 10 minutos (600 segundos)
-        setTimeout(() => {
-            document.getElementById("ctaButtons").classList.remove("hidden");
-        }, 600000);
-    </script>
-</body>
-</html>
+            if (vagas
