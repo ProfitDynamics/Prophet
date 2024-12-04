@@ -2,139 +2,241 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Profit Dynamics</title>
+    <title>Sua Vida Pode Mudar a Partir de Hoje</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            /* Fundo chamativo e colorido */
-            background: linear-gradient(45deg, #ff0066, #ffcc00, #33ccff);
-            background-size: 600% 600%;
-            animation: gradientAnimation 15s ease infinite;
+            padding: 0 20px; /* Adicionado espaço nas laterais */
+            background: linear-gradient(90deg, #1e3c72, #2a5298);
+            color: #fff;
         }
 
-        @keyframes gradientAnimation {
-            0% {background-position: 0% 50%;}
-            50% {background-position: 100% 50%;}
-            100% {background-position: 0% 50%;}
-        }
-
-        .header, .content, .testimonials, .footer {
+        header, .section, footer {
             padding: 20px;
             text-align: center;
-            color: #fff; /* Texto em branco para contraste */
+        }
+
+        .hero {
+            background: linear-gradient(90deg, #00c853, #1e88e5);
+            color: #fff;
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px #000;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .hero video {
+            width: 100%;
+            max-width: 720px;
+            height: 400px;
+            border: none;
+            border-radius: 10px;
         }
 
         .logo {
-            margin-top: 20px;
+            margin: 20px auto;
         }
 
         .logo img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%; /* Deixa a imagem arredondada */
-            object-fit: cover;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
         }
 
-        .video-container {
-            position: relative;
-            width: 80%;
-            margin: 0 auto;
+        .counter {
+            font-size: 18px;
+            background: #ff0000;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 15px;
+            font-weight: bold;
         }
 
-        .checkout-button {
-            display: none; /* O botão começa oculto */
-            margin-top: 20px;
+        .button {
+            background-color: #ffcc00;
+            color: #000;
             padding: 15px 30px;
             font-size: 18px;
-            background-color: #28a745;
-            color: #fff;
+            font-weight: bold;
             border: none;
             cursor: pointer;
+            text-transform: uppercase;
+            border-radius: 5px;
+            margin: 10px auto;
+            display: inline-block;
+            text-decoration: none;
         }
 
-        .checkout-button:hover {
-            background-color: #218838;
+        .button:hover {
+            background-color: #ffd633;
         }
 
-        /* Destaque para o título */
-        .header h1 {
-            font-size: 48px;
-            font-weight: bold;
-            text-shadow: 2px 2px #000;
+        .hidden {
+            display: none;
+        }
+
+        .story, .benefits {
+            max-width: 900px; /* Limita a largura máxima do texto */
+            margin: 20px auto; /* Centraliza o conteúdo horizontalmente */
+            padding: 20px; /* Adiciona espaço interno ao conteúdo */
+            background: #ffffff10;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits li {
+            font-size: 16px;
+            margin: 20px 0;
+            text-align: left;
+            background: #ffffff20;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .benefits li h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #ffcc00;
+        }
+
+        footer {
+            background: #222;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #1e88e5;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1, .section h2 {
+                font-size: 28px;
+            }
+
+            .hero video {
+                height: auto;
+            }
+
+            .button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+
+            .story, .benefits {
+                padding: 15px; /* Reduz o padding em telas menores */
+            }
         }
     </style>
 </head>
 <body>
-
-    <!-- Cabeçalho com título, subtítulo e logo -->
-    <div class="header">
-        <h1>Descubra a Estratégia que Está Transformando Investidores Comuns em Verdadeiros Lucradores Automáticos</h1>
-        <h2>Estrategia e tecnologia para operações inteligentes.</h2>
-        
-        <!-- Logo da empresa -->
+    <!-- Cabeçalho Chamativo -->
+    <header class="hero">
+        <div class="counter" id="vagasCounter">Restam apenas 89 vagas de 500!</div>
         <div class="logo">
             <img src="https://github.com/Terrivel007/minha-landing-page/blob/e6f560daba9a440cfce163cdc096c10fbc862d11/a-sleek-and-modern-logo-for-profit-dynamics-a-comp-jI62b8fHTDCutTRy6iVqFA-ar34ut5FTfq6q5EnCpsviw%20(1).jpeg?raw=true" alt="Logo da Empresa">
         </div>
+        <h1>A Solução Que Está Mudando o Jogo no Mercado Financeiro</h1>
+        <p>Uma ferramenta que combina tecnologia e estatísticas para gerar resultados consistentes. Sem complicações, sem estresse.</p>
+        <video id="videoPlayer" controls>
+            <source src="https://github.com/SEU_USUARIO/SEU_REPOSITORIO/raw/main/seu-video.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </header>
+
+    <!-- Botões de Ação (Aparecem após 10 minutos) -->
+    <div id="ctaButtons" class="hidden">
+        <a href="#" class="button">Sim, Quero Aproveitar Antes Que Acabe!</a>
+        <a href="#" class="button">Sim, Estou Pronto para Lucrar!</a>
     </div>
 
-    <!-- Vídeo do YouTube -->
-    <div class="video-container">
-        <iframe id="video" width="100%" height="500" src="https://www.youtube.com/embed/FTVqqZ6c-cI?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-    </div>
+    <!-- Minha História Completa -->
+    <section class="story">
+        <h2>Minha Jornada de Superação</h2>
+        <p>Olá, meu nome é Everton, nasci em 1992, na zona leste de São Paulo, em uma família humilde. Cresci em uma comunidade onde a chuva entrava pela casa, e a gente precisava usar sabão em pedra derretido para tampar os buracos no telhado. Apesar das dificuldades, nunca faltou comida na mesa, graças ao esforço da minha mãe, que trabalhava como empregada doméstica para sustentar a mim, meus dois irmãos e dois primos.</p>
+        <p>Mas a vida nunca foi fácil. Meu pai passou anos desempregado, e, quando ele conseguiu um emprego, já estava com 12 anos. Foi uma melhora, mas não por muito tempo. Nessa época, minha mãe enfrentou um câncer maligno no útero, o que nos trouxe outro grande desafio. Ela perdeu o emprego e precisou passar por longos tratamentos de radioterapia. Felizmente, ela venceu o câncer, mas a nossa situação financeira ficou ainda mais complicada.</p>
+        <p>Com 13 anos, comecei a trabalhar como ajudante de pedreiro, e, aos 14, vendia temperos na feira junto com minha mãe. Ajudar em casa era uma necessidade, e minha infância foi marcada pelo trabalho duro.</p>
+        <p><strong>Buscando Oportunidades</strong></p>
+        <p>Aos 16 anos, quando meu pai perdeu o emprego novamente, conseguimos dar entrada em um apartamento na zona leste com o dinheiro da rescisão. Mudamos para uma área entre Guaianases, Cidade Tiradentes e Itaquera. Trabalhei como ajudante de pintor, depois em uma gráfica, e, aos 19 anos, consegui um emprego na região da 25 de março, onde fiquei por 10 anos.</p>
+        <p>Foi nesse período, com 25 anos, que algo mudou. Vi um anúncio sobre ganhar dinheiro de forma rápida e fácil no mercado financeiro . Meu salário era de R$ 900, mas o curso custava R$ 1.600. Peguei um cartão emprestado e investi. O curso foi motivador, mas, na prática, os resultados não vieram. Comecei uma jornada intensa em busca de aprendizado: gastei dinheiro com cursos, estratégias milagrosas, robôs e indicadores. No fim, somando tudo, já tinha perdido mais de R$30.000 tentando encontrar o "santo graal" do day trade.</p>
+        <p><strong>O Ponto de Virada</strong></p>
+        <p>Depois de tantas perdas, entendi que o problema não era apenas nas estratégias, mas também no emocional . Toda vez que eu operava manualmente, fazia besteira. Foi então que decidi eliminar o emocional da equação e comecei a desenvolver meu próprio robô.
 
-    <!-- Título, subtítulo e descrição após o vídeo -->
-    <div class="content">
-        <h1><!-- Coloque aqui o segundo título --></h1>
-        <h2><!-- Coloque aqui o segundo subtítulo --></h2>
-        <p><!-- Coloque aqui a descrição do produto --></p>
-    </div>
+            Desenvolvi uma ferramenta com um conceito totalmente diferente de tudo o que tinha aprendido. Eu mesmo criei as estratégias, sem copiar fórmulas prontas. Foi nesse momento que tudo começou a mudar. O robô começou a trazer consistência :
+            
+            As perdas passaram a ser controladas.
+            Os ganhos obtidos a superar todas elas.
+            Hoje, meu robô opera sozinho enquanto eu trabalho, assisto a série ou brinco com minha filha. A consistência, que tanto busquei, finalmente chegou.</p>
+        <p><strong>Por Que Compartilho Minha História?</strong></p>
+        <p>Se você está lendo isso, talvez já tenha passado pelas mesmas dificuldades que eu passei:
 
-    <!-- Depoimentos -->
-    <div class="testimonials">
-        <h2>Depoimentos</h2>
-        <!-- Coloque aqui os depoimentos -->
-        <p><!-- Depoimento 1 --></p>
-        <p><!-- Depoimento 2 --></p>
-        <p><!-- Depoimento 3 --></p>
-    </div>
+            Invista tempo e dinheiro em estratégias que não funcionam.
+            Sentir que o mercado financeiro é só para quem tem muita sorte ou experiência.
+            Lidar com o emocional e acabar tomando decisões ruinosas.
+            Eu sei o quanto isso é frustrante. Mas quero que você saiba: há uma solução. Não é mágico, nem promessa milagrosa, mas sim tecnologia e controle.
+            
+            Hoje, depois de mais de um ano de resultados consistentes, sinto-me confiante em compartilhar meu robô com você. Ele é o produto de anos de erros, aprendizados e desenvolvimento..</p>
+        <p><strong>Minha Família: Minha Motivação</strong></p>  
+        <p>Hoje tenho 32 anos e sou casado com uma mulher incrível desde os 28 anos . Também sou pai de uma menina linda de 4 anos, que ilumina meus dias. Minha maior motivação sempre foi dar uma vida melhor para minha família e retribuir todo o esforço dos meus pais. Ainda tenho sonhos grandes, mas agora, finalmente, sinto que não estou no caminho certo.</p>    
+    </section>
 
-    <!-- Botão de Checkout -->
-    <div class="footer">
-        <button id="checkoutButton" class="checkout-button" onclick="window.location.href='link-do-checkout'">
-            Ir para o Checkout
-        </button>
-    </div>
 
-    <!-- Carregar a API do YouTube -->
-    <script src="https://www.youtube.com/iframe_api"></script>
+    <!-- Destaques dos Benefícios -->
+    <section class="benefits">
+        <h2>Benefícios Exclusivos</h2>
+        <ul>
+            <li>
+                <h3>1. Economia de Tempo e Esforço</h3>
+                <p>Deixe o algoritmo fazer o trabalho pesado enquanto você foca no que realmente importa.</p>
+            </li>
+            <!-- Outros benefícios -->
+        </ul>
+    </section>
+
+    <!-- Script para Contagem Regressiva -->
     <script>
-        var player;
-        var hasShownButton = false;
+        let vagasRestantes = 89; // Número inicial de vagas
+        const counterElement = document.getElementById("vagasCounter");
 
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('video', {
-                events: {
-                    'onStateChange': onPlayerStateChange
-                }
-            });
-        }
-
-        function onPlayerStateChange(event) {
-            if (event.data == YT.PlayerState.PLAYING && !hasShownButton) {
-                var durationWatched = 0;
-                var checkTime = setInterval(function() {
-                    durationWatched += 1;
-                    if (durationWatched >= 600) { // 600 segundos = 10 minutos
-                        document.getElementById('checkoutButton').style.display = 'inline-block';
-                        hasShownButton = true;
-                        clearInterval(checkTime);
-                    }
-                }, 1000);
+        function atualizarContador() {
+            if (vagasRestantes > 0) {
+                vagasRestantes--; // Reduz uma vaga
+                counterElement.textContent = `Restam apenas ${vagasRestantes} vagas de 500!`;
             }
         }
-    </script>
 
+        // Atualiza o contador a cada 1 minuto
+        setInterval(atualizarContador, 60000);
+
+        // Exibe os botões após 10 minutos (600 segundos)
+        setTimeout(() => {
+            document.getElementById("ctaButtons").classList.remove("hidden");
+        }, 600000);
+    </script>
 </body>
 </html>
