@@ -205,10 +205,10 @@
     <p>Hoje tenho 32 anos e sou casado com uma mulher incrível desde os 28 anos . Também sou pai de uma menina linda de 4 anos, que ilumina meus dias. Minha maior motivação sempre foi dar uma vida melhor para minha família e retribuir todo o esforço dos meus pais. Ainda tenho sonhos grandes, mas agora, finalmente, sinto que estou no caminho certo.</p>    
 </section>
 
-    <!-- Botão "Sim, Estou Pronto para Lucrar!" -->
-    <div id="ctaButtonTop" class="hidden">
-        <a href="https://chk.eduzz.com/7WX5NDED0A" target="_blank" class="button">Sim, Estou Pronto para Lucrar!</a>
-    </div>
+   <!-- Botões de Ação (Inicialmente Ocultos) -->
+<div id="ctaButtonTop" class="hidden">
+    <a href="https://chk.eduzz.com/7WX5NDED0A" class="button">Sim, Estou Pronto para Lucrar!</a>
+</div>
 
     <!-- Depoimentos -->
     <section class="testimonials">
@@ -252,31 +252,29 @@
     </section>
 
 
-    <!-- Botão "Sim, Quero Aproveitar Antes Que Acabe!" -->
     <div id="ctaButtonBottom" class="hidden">
-        <a href="https://chk.eduzz.com/7WX5NDED0A" target="_blank" class="button">Sim, Quero Aproveitar Antes Que Acabe!</a>
-    </div>
+    <a href="https://chk.eduzz.com/7WX5NDED0A" class="button">Sim, Quero Aproveitar Antes Que Acabe!</a>
+</div>
 
-    <!-- Script -->
-    <script>
-        let vagasRestantes = 79;
-        const counterElement = document.getElementById("vagasCounter");
+   <!-- Script -->
+<script>
+    let vagasRestantes = 89;
+    const counterElement = document.getElementById("vagasCounter");
 
-              function atualizarContador() {
-            if (vagasRestantes > 0) {
-                vagasRestantes--;
-                counterElement.textContent = `Restam apenas ${vagasRestantes} vagas de 500!`;
-            }
+    // Atualiza o contador de vagas
+    function atualizarContador() {
+        if (vagasRestantes > 0) {
+            vagasRestantes--;
+            counterElement.textContent = `Restam apenas ${vagasRestantes} vagas de 500!`;
         }
+    }
 
-        // Atualiza o contador a cada 1 minuto (60000 ms)
-        setInterval(atualizarContador, 60000);
+    // Atualiza o contador a cada 1 minuto (60000 ms)
+    setInterval(atualizarContador, 60000);
 
-        // Exibe os botões de ação após 5 minutos (300000 ms)
-        setTimeout(() => {
-            document.getElementById("ctaButtonTop").classList.remove("hidden");
-            document.getElementById("ctaButtonBottom").classList.remove("hidden");
-        }, 300000);
-    </script>
-</body>
-</html>
+    // Exibe os botões de ação após 5 minutos (300000 ms)
+    setTimeout(() => {
+        document.getElementById("ctaButtonTop").classList.remove("hidden");
+        document.getElementById("ctaButtonBottom").classList.remove("hidden");
+    }, 300000); // 5 minutos em milissegundos
+</script>
